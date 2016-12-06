@@ -1,18 +1,14 @@
 package learning
 
-import org.apache.spark.{SparkConf, SparkContext}
-import org.apache.spark.rdd.RDD
 import com.datastax.spark.connector._
+import org.apache.spark.SparkContext
 
 /**
   * Created by jyothi on 6/12/16.
   */
 object Join {
 
-  def main(args: Array[String]): Unit = {
-    val conf = new SparkConf().setAppName("cassandra-example-join")
-
-    val sc = new SparkContext(conf)
+  def main(args: Array[String], sc: SparkContext): Unit = {
 
     val visits = sc.cassandraTable[(String, String)]("test", "user_visits").
       select("store", "user")

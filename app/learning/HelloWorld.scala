@@ -1,20 +1,14 @@
 package learning
 
-import org.apache.spark.{SparkConf, SparkContext}
 import com.datastax.spark.connector._
+import org.apache.spark.SparkContext
 
 /**
   * Created by jyothi on 6/12/16.
   */
 object HelloWorld {
 
-  def main(args: Array[String]): Unit = {
-
-    val conf = new SparkConf(true)
-      .setMaster("local[*]")
-      .setAppName("SparkCassandraScalaPlay")
-
-    val sc = new SparkContext(conf)
+  def main(args: Array[String], sc: SparkContext): Unit = {
 
     val table = sc.cassandraTable[(String, String)]("test", "hello") //keySpace: test , table: hello
 

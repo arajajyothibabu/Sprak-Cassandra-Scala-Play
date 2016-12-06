@@ -3,6 +3,7 @@ package learning
 import org.apache.spark.rdd.RDD
 import com.datastax.spark.connector._
 import org.apache.spark.{SparkConf, SparkContext}
+import utils.CassandraWithSparkContext
 
 import scala.util.Random
 
@@ -37,10 +38,7 @@ object Insert {
     }
   }
 
-  def main(args: Array[String]): Unit = {
-    val conf = new SparkConf().setAppName("cassandra-example-insert")
-
-    val sc = new SparkContext(conf)
+  def main(args: Array[String], sc: SparkContext): Unit = {
 
     val numStores = 128
 

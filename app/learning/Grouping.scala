@@ -1,7 +1,6 @@
 package learning
 
 import org.apache.spark.{SparkConf, SparkContext}
-import org.apache.spark.rdd.RDD
 import com.datastax.spark.connector._
 
 /**
@@ -9,10 +8,7 @@ import com.datastax.spark.connector._
   */
 object Grouping {
 
-  def main(args: Array[String]): Unit = {
-    val conf = new SparkConf().setAppName("cassandra-example-grouping")
-
-    val sc = new SparkContext(conf)
+  def main(args: Array[String], sc: SparkContext): Unit = {
 
     val visits = sc.cassandraTable[(String)]("test", "user_visits").
       select("user")

@@ -1,7 +1,6 @@
 package learning
 
 import org.apache.spark.{SparkConf, SparkContext}
-import org.apache.spark.rdd.RDD
 import com.datastax.spark.connector._
 
 /**
@@ -9,10 +8,7 @@ import com.datastax.spark.connector._
   */
 object BroadcastJoin {
 
-  def main(args: Array[String]): Unit = {
-    val conf = new SparkConf().setAppName("cassandra-example-broadcast-join")
-
-    val sc = new SparkContext(conf)
+  def main(args: Array[String], sc: SparkContext): Unit = {
 
     val storeToCity = sc.cassandraTable[(String, String)]("test", "stores").
       select("store", "city").

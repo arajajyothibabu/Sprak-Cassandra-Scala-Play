@@ -8,8 +8,37 @@
         <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/main.css")">
         <link rel="shortcut icon" type="image/png" href="@routes.Assets.at("images/favicon.png")">
         <script src="@routes.Assets.at("javascripts/jquery-1.9.0.min.js")" type="text/javascript"></script>
+        <style>
+        span{
+            display: inline-block;
+            margin: auto 10px;
+            color: white !important;
+            font-size: 20px !important;
+            line-height: 24px;
+        }
+        span a {
+            color: white !important;
+        }
+        </style>
     </head>
     <body>
-        @content
+        <section id="top">
+            <div class="wrapper">
+                <span><a href="/hello">HelloWorld</a></span>
+                <span><a href="/hello">Insert</a></span>
+                <span><a href="/hello">Join</a></span>
+                <span><a href="/hello">Grouping</a></span>
+                <span><a href="/hello">Broadcast Join</a></span>
+                <span><a href="/hello">GroupBy KeyIterator</a></span>
+                <span><a href="/hello">PartitionGrouping</a></span>
+            </div>
+        </section>
+        <article>
+
+            <h1>Welcome to Spark Cassandra Scala Play Application</h1>
+
+            <p>Check your console for results..!</p>
+        </article>
     </body>
 </html>
+

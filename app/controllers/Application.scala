@@ -1,13 +1,14 @@
 package controllers
 
-import learning.HelloWorld
+import learning._
+import org.apache.spark.SparkContext
 import play.api._
 import play.api.mvc._
 
 import scala.concurrent.Future
 import scala.concurrent.ExecutionContext.Implicits.global
 
-class Application extends Controller {
+class Application(sparkContext: SparkContext) extends Controller {
 
   def index = Action {
     Redirect(routes.Application.hello())
@@ -15,49 +16,49 @@ class Application extends Controller {
 
   def hello = Action {
     Future{
-      HelloWorld.main(new Array[String](0))
+      HelloWorld.main(new Array[String](0), sparkContext)
     }
     Ok(views.html.index("Your new application is ready."))
   }
 
   def insert = Action {
     Future{
-      HelloWorld.main(new Array[String](0))
+      Insert.main(new Array[String](0), sparkContext)
     }
     Ok(views.html.index("Your new application is ready."))
   }
 
   def group = Action {
     Future{
-      HelloWorld.main(new Array[String](0))
+      Grouping.main(new Array[String](0), sparkContext)
     }
     Ok(views.html.index("Your new application is ready."))
   }
 
   def groupBy = Action {
     Future{
-      HelloWorld.main(new Array[String](0))
+      //new GroupByKeyIterator[]()
     }
     Ok(views.html.index("Your new application is ready."))
   }
 
   def join = Action {
     Future{
-      HelloWorld.main(new Array[String](0))
+      Join.main(new Array[String](0), sparkContext)
     }
     Ok(views.html.index("Your new application is ready."))
   }
 
   def broadcastJoin = Action {
     Future{
-      HelloWorld.main(new Array[String](0))
+      BroadcastJoin.main(new Array[String](0), sparkContext)
     }
     Ok(views.html.index("Your new application is ready."))
   }
 
   def partitionGrouping = Action {
     Future{
-      HelloWorld.main(new Array[String](0))
+      PartitionGrouping.main(new Array[String](0), sparkContext)
     }
     Ok(views.html.index("Your new application is ready."))
   }

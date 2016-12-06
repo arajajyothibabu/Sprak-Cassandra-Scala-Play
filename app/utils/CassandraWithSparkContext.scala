@@ -6,7 +6,7 @@ import org.apache.spark.{SparkConf, SparkContext}
   * Created by jyothi on 6/12/16.
   */
 
-private[utils] trait CassandraWithSparkContext {
+trait CassandraWithSparkContext {
 
   def getSparkContext(args: Array[String]): SparkContext = {
     val conf = new SparkConf(true)
