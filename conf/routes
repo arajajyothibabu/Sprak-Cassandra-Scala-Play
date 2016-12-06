@@ -9,7 +9,7 @@ GET     /insert                     controllers.Application.insert
 GET     /group                      controllers.Application.group
 GET     /join                       controllers.Application.join
 GET     /groupby                    controllers.Application.groupBy
-GET     /partion-grouping           controllers.Application.partionGrouping
+GET     /partition-grouping         controllers.Application.partitionGrouping
 GET     /broadcast-join             controllers.Application.broadcastJoin
 
 # Map static resources from the /public folder to the /assets URL path

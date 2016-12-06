@@ -19,11 +19,13 @@ object HelloWorld {
     val table = sc.cassandraTable[(String, String)]("test", "hello") //keySpace: test , table: hello
 
     println("Table:: " + table)
-    val first = table.first
 
-    sc.stop
+    val first = table.first()
+
+    sc.stop //stop sparkContext here
 
     println("Table First Tuple:: " + first)
+
   }
 
 }

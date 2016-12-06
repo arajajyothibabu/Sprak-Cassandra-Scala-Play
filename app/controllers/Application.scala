@@ -55,7 +55,7 @@ class Application extends Controller {
     Ok(views.html.index("Your new application is ready."))
   }
 
-  def partionGrouping = Action {
+  def partitionGrouping = Action {
     Future{
       HelloWorld.main(new Array[String](0))
     }
