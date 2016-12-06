@@ -5,11 +5,12 @@ bin/
 /lib/
 /logs/
 /modules
-/project/target
-/target
+project
+target
 tmp/
 test-result
 server.pid
 *.eml
 /dist/
 .cache
+.idea/
