@@ -23,6 +23,7 @@ class Application(sparkContext: SparkContext) extends Controller {
 
   def insert = Action {
     Future{
+      println("calling:::::::::: Insert")
       Insert.main(new Array[String](0), sparkContext)
     }
     Ok(views.html.index("Your new application is ready."))

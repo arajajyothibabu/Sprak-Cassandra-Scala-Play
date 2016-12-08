@@ -16,7 +16,7 @@ object HelloWorld {
 
     val first = table.first()
 
-    sc.stop //stop sparkContext here
+    //sc.stop //stop sparkContext here
 
     println("Table First Tuple:: " + first)
 

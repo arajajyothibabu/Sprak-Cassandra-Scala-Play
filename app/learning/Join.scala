@@ -22,7 +22,7 @@ object Join {
 
     val result = visitsPerCity.collect
 
-    sc.stop
+    //sc.stop
 
     result.foreach(println)
   }

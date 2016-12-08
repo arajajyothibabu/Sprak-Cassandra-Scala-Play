@@ -26,7 +26,7 @@ object BroadcastJoin {
 
     val result = visitsPerCity.collect
 
-    sc.stop
+    //sc.stop
 
     result.foreach(println)
   }

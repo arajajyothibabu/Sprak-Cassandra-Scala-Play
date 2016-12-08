@@ -19,7 +19,7 @@ object Grouping {
 
     val maxVisits = visitsPerUser.values.max
 
-    sc.stop
+    //sc.stop
 
     println(maxVisits)
   }

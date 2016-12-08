@@ -21,7 +21,7 @@ object PartitionGrouping {
 
     val maxVisits = visitsPerUser.values.max
 
-    sc.stop
+    //sc.stop
 
     println(maxVisits)
   }
