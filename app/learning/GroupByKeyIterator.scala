@@ -6,6 +6,7 @@ import scala.reflect.ClassTag
 /**
   * Created by jyothi on 6/12/16.
   */
+/** Groups values by key. Assumes underlying iterator contains keys already grouped in order */
 class GroupByKeyIterator[K, V: ClassTag](it: Iterator[Product2[K,V]]) extends Iterator[(K, Array[V])] {
   var key: Option[K] = None
   val values = new ArrayBuffer[V]()
