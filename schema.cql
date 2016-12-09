@@ -12,7 +12,7 @@ CREATE TABLE IF NOT EXISTS hello (
 );
 
 INSERT INTO hello (greeting, name) VALUES ('hello', 'world');
-INSERT INTO hello (greeting, name) VALUES ('hola', 'mundo');
+INSERT INTO hello (greeting, name) VALUES ('hai', 'fella');
 
 CREATE TABLE IF NOT EXISTS user_visits (
   user TEXT,

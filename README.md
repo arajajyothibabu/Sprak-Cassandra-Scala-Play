@@ -12,12 +12,12 @@ Powered by Apache Spark, Cassandra, Scala and Play Framework
 
 2. Run [schema](https://github.com/arajajyothibabu/Sprak-Cassandra-Scala-Play/blob/master/schema.cql)
 ```$xslt
-cqlsh --file schema.sql
+    cqlsh --file schema.sql
 ```
 
 3. Run **cassandra** in Terminal
  ```$xslt
-> cqlsh
+    > cqlsh
 ```
 
 4. Run this project using 

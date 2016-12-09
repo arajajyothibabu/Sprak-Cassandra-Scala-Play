@@ -23,7 +23,7 @@ class Application(sparkContext: SparkContext) extends Controller {
 
   def insert = Action {
     Future{
-      println("calling:::::::::: Insert")
+      println("***********Insert************")
       Insert.main(new Array[String](0), sparkContext)
     }
     Ok(views.html.index("Your new application is ready."))
@@ -31,6 +31,7 @@ class Application(sparkContext: SparkContext) extends Controller {
 
   def group = Action {
     Future{
+      println("***********Grouping************")
       Grouping.main(new Array[String](0), sparkContext)
     }
     Ok(views.html.index("Your new application is ready."))
@@ -38,6 +39,7 @@ class Application(sparkContext: SparkContext) extends Controller {
 
   def groupBy = Action {
     Future{
+      println("***********GroupBy************")
       //new GroupByKeyIterator[]()
     }
     Ok(views.html.index("Your new application is ready."))
@@ -45,6 +47,7 @@ class Application(sparkContext: SparkContext) extends Controller {
 
   def join = Action {
     Future{
+      println("***********Join************")
       Join.main(new Array[String](0), sparkContext)
     }
     Ok(views.html.index("Your new application is ready."))
@@ -52,6 +55,7 @@ class Application(sparkContext: SparkContext) extends Controller {
 
   def broadcastJoin = Action {
     Future{
+      println("***********BroadcastJoin************")
       BroadcastJoin.main(new Array[String](0), sparkContext)
     }
     Ok(views.html.index("Your new application is ready."))
@@ -59,6 +63,7 @@ class Application(sparkContext: SparkContext) extends Controller {
 
   def partitionGrouping = Action {
     Future{
+      println("***********Partition Grouping************")
       PartitionGrouping.main(new Array[String](0), sparkContext)
     }
     Ok(views.html.index("Your new application is ready."))
