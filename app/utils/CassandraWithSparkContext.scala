@@ -13,7 +13,7 @@ trait CassandraWithSparkContext {
       .setMaster("local[*]")
       .setAppName("SparkCassandraScalaPlay")
       .set("spark.app.id", "SparkCassandraScalaPlay")
-      //.set("spark.cassandra.connection.host", "cassandraserver") we can set cassandra server name here
+      .set("spark.cassandra.connection.host", "127.0.0.1") //we can set cassandra server name here
 
     val sc = new SparkContext(conf)
     sc

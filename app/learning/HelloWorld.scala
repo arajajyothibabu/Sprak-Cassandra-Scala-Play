@@ -14,7 +14,7 @@ object HelloWorld {
 
     println("Table:: " + table)
 
-    val first = table.first()
+    val first = table.first
 
     //sc.stop //stop sparkContext here
 
