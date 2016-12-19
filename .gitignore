@@ -5,7 +5,7 @@ bin/
 /lib/
 /logs/
 /modules
-project
+project/project
 target
 tmp/
 test-result
